@@ -1,4 +1,5 @@
 class Animal {
+  #someParent = 1;
   constructor(name) {
     this.name = name;
   }
@@ -22,15 +23,23 @@ class Dog extends Animal {
 
   bark() {
     console.log(`${this.name} is barking`);
+    console.log(`Type is ${this.#type}`);
+    // this.#someParrent
+  }
+
+  jump () {
+    super.jump()
+    console.log('override jump')
   }
 }
 
 const animal = new Animal('abby');
-const dog = new Dog('Barkus', '123');
+const dog = new Dog('Barkus', 'Dog');
 
 animal.jump();
 dog.jump();
 dog.bark();
 
+
 console.log(Dog.getInstance());
-console.log(dog.#type)
+// console.log(dog.#type)

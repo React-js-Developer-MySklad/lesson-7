@@ -1,12 +1,18 @@
 function Animal(name) {
   this.name = name;
+
+  this.jump = function () {
+    console.log(`${this.name} is jumping`);
+  }
 }
+
 Animal.staticMethod = () => {
   console.log('static method');
 };
-Animal.prototype.jump = function () {
-  console.log(`${this.name} is juping`);
-};
+
+// Animal.prototype.jump = function () {
+//   console.log(`${this.name} is jumping`);
+// };
 
 function Dog(name, type) {
   Animal.call(this, name);
@@ -25,5 +31,7 @@ const dog = new Dog('Barkus', '123');
 animal.jump();
 dog.jump();
 dog.bark();
+
+console.log(dog.jump === animal.jump);
 
 Animal.staticMethod();

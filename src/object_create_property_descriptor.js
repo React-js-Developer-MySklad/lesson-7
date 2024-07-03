@@ -1,13 +1,14 @@
 (function () {
   'use strict';
+
   const obj = Object.create(
     {},
     {
       name: {
-        writable: true,
-        enumerable: true,
+        writable: false,
+        enumerable: false,
         value: 'Bob',
-        configurable: true,
+        configurable: false,
       },
     }
   );
@@ -19,5 +20,5 @@
 
   delete obj.name 
  
-  console.log(obj.name);
+  console.log(obj);
 })();

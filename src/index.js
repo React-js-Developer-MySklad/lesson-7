@@ -12,4 +12,4 @@
 // import('./class.js');
 
 // import('./call_apply_bind.js');
-// import('./class_bind_this.js');
+import('./class_bind_this.js');

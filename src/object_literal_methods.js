@@ -1,5 +1,6 @@
 const obj = {
   someValue: 1,
+
   get value() {
     return this.someValue;
   },
@@ -9,7 +10,7 @@ const obj = {
   },
 
   methodName() {
-    return this.someValue + this.someValue;
+    return this.someValue + this.value;
   },
 };
 
